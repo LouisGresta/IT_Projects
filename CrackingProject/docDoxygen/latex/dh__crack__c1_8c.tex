@@ -1,0 +1,106 @@
+\hypertarget{dh__crack__c1_8c}{}\doxysection{Code/dh\+\_\+crack\+\_\+c1.c File Reference}
+\label{dh__crack__c1_8c}\index{Code/dh\_crack\_c1.c@{Code/dh\_crack\_c1.c}}
+
+
+Fonction dh\+\_\+crack\+\_\+c1.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack\+\_\+c1.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{dh__crack__c1_8c_afb58ae190f475f099c92558853f0735c}{Good\+Char}} (int c)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_a6602f80c3b70895dfe38fbe0d45b3310}{Possibility}} (char $\ast$file\+\_\+crypt, char $\ast$$\ast$tabC, int len\+\_\+key)
+\item 
+void \mbox{\hyperlink{dh__crack__c1_8c_afd2ab118aae0106a3551cea9a0bb82f2}{LKey\+Potential}} (char Keys\mbox{[}MAX\+\_\+\+KEYS\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}, char $\ast$$\ast$tabC, char c\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}, int $\ast$possibilities, int i, int len\+\_\+key)
+\item 
+int \mbox{\hyperlink{dh__crack__c1_8c_abaa98c169082c492fedaffdfe99e51b8}{dh\+\_\+crack\+\_\+c1}} (char Keys\mbox{[}MAX\+\_\+\+KEYS\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}, char $\ast$file\+\_\+crypt, int len\+\_\+key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fonction dh\+\_\+crack\+\_\+c1. 
+
+\begin{DoxyAuthor}{Author}
+Louis Gresta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10 janvier 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dh__crack__c1_8c_abaa98c169082c492fedaffdfe99e51b8}\label{dh__crack__c1_8c_abaa98c169082c492fedaffdfe99e51b8}} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!dh\_crack\_c1@{dh\_crack\_c1}}
+\index{dh\_crack\_c1@{dh\_crack\_c1}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{dh\_crack\_c1()}{dh\_crack\_c1()}}
+{\footnotesize\ttfamily int dh\+\_\+crack\+\_\+c1 (\begin{DoxyParamCaption}\item[{char}]{Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]},  }\item[{char $\ast$}]{file\+\_\+crypt,  }\item[{int}]{len\+\_\+key }\end{DoxyParamCaption})}
+
+Donne les clés candidates en utilisant la méthode C1 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}} & un tableau de caractères correspondant à la liste des clés candidates \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+crypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier crypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+possibilities un entier qui correspond au nombre de possibilités de clés
+\end{DoxyReturn}
+\mbox{\Hypertarget{dh__crack__c1_8c_afb58ae190f475f099c92558853f0735c}\label{dh__crack__c1_8c_afb58ae190f475f099c92558853f0735c}} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!GoodChar@{GoodChar}}
+\index{GoodChar@{GoodChar}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{GoodChar()}{GoodChar()}}
+{\footnotesize\ttfamily int Good\+Char (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Vérifie qu\textquotesingle{}un caractère est acceptable 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & un entier représentant un caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vrai ou faux (1 ou 0)
+\end{DoxyReturn}
+\mbox{\Hypertarget{dh__crack__c1_8c_afd2ab118aae0106a3551cea9a0bb82f2}\label{dh__crack__c1_8c_afd2ab118aae0106a3551cea9a0bb82f2}} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!LKeyPotential@{LKeyPotential}}
+\index{LKeyPotential@{LKeyPotential}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{LKeyPotential()}{LKeyPotential()}}
+{\footnotesize\ttfamily void LKey\+Potential (\begin{DoxyParamCaption}\item[{char}]{Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]},  }\item[{char $\ast$$\ast$}]{tabC,  }\item[{char}]{c\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]},  }\item[{int $\ast$}]{possibilities,  }\item[{int}]{i,  }\item[{int}]{len\+\_\+key }\end{DoxyParamCaption})}
+
+Vérifie les possibilités des caractères de la clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}} & un tableau de caractères correspondant à la liste des clés candidates \\
+\hline
+\mbox{\texttt{ in}}  & {\em tabC} & un tableau de chaînes de caractères comportant les différentes possibilitées de caractères pour la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & une chaîne de caractères correspondant aux caractères de la clé candidate \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$possibilities} & un pointeur sur la valeur de l\textquotesingle{}entier possibilities qui correspond à l\textquotesingle{}indice auquel stocker la clé candidate dans Keys\mbox{[}MAX\+\_\+\+KEYS\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em i} & un entier correspondant à l\textquotesingle{}indice du caractère i+1 de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c1_8c_a6602f80c3b70895dfe38fbe0d45b3310}\label{dh__crack__c1_8c_a6602f80c3b70895dfe38fbe0d45b3310}} 
+\index{dh\_crack\_c1.c@{dh\_crack\_c1.c}!Possibility@{Possibility}}
+\index{Possibility@{Possibility}!dh\_crack\_c1.c@{dh\_crack\_c1.c}}
+\doxysubsubsection{\texorpdfstring{Possibility()}{Possibility()}}
+{\footnotesize\ttfamily void Possibility (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+crypt,  }\item[{char $\ast$$\ast$}]{tabC,  }\item[{int}]{len\+\_\+key }\end{DoxyParamCaption})}
+
+Vérifie les possibilités des caractères de la clé 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+crypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier crypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em tabC} & un tableau de chaînes de caractères comportant les différentes possibilitées de caractères pour la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé\\
+\hline
+\end{DoxyParams}

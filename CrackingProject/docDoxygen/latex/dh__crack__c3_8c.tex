@@ -1,0 +1,83 @@
+\hypertarget{dh__crack__c3_8c}{}\doxysection{Code/dh\+\_\+crack\+\_\+c3.c File Reference}
+\label{dh__crack__c3_8c}\index{Code/dh\_crack\_c3.c@{Code/dh\_crack\_c3.c}}
+
+
+Fonction dh\+\_\+crack\+\_\+c3.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack\+\_\+c2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack\+\_\+c3.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__crack__c3_8c_ac52502faac25a1479554ae6f3e7adbc3}{init\+Score}} (int Scores\mbox{[}MAX\+\_\+\+KEYS\mbox{]})
+\item 
+void \mbox{\hyperlink{dh__crack__c3_8c_a60250c0271de31fc0739a4483fbc300b}{Case\+Words}} (int Scores\mbox{[}MAX\+\_\+\+KEYS\mbox{]}, int index\+\_\+key, char $\ast$file\+\_\+decrypt, char $\ast$file\+\_\+dict)
+\item 
+void \mbox{\hyperlink{dh__crack__c3_8c_ab8eedb648dd02cfd661f05e3868b7bd5}{dh\+\_\+crack\+\_\+c3}} (char Keys\mbox{[}MAX\+\_\+\+KEYS\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}, int Scores\mbox{[}MAX\+\_\+\+KEYS\mbox{]}, char $\ast$file\+\_\+crypt, char $\ast$file\+\_\+dict, int len\+\_\+key, int nb\+Keys)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fonction dh\+\_\+crack\+\_\+c3. 
+
+\begin{DoxyAuthor}{Author}
+Louis Gresta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10 janvier 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dh__crack__c3_8c_a60250c0271de31fc0739a4483fbc300b}\label{dh__crack__c3_8c_a60250c0271de31fc0739a4483fbc300b}} 
+\index{dh\_crack\_c3.c@{dh\_crack\_c3.c}!CaseWords@{CaseWords}}
+\index{CaseWords@{CaseWords}!dh\_crack\_c3.c@{dh\_crack\_c3.c}}
+\doxysubsubsection{\texorpdfstring{CaseWords()}{CaseWords()}}
+{\footnotesize\ttfamily void Case\+Words (\begin{DoxyParamCaption}\item[{int}]{Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]},  }\item[{int}]{index\+\_\+key,  }\item[{char $\ast$}]{file\+\_\+decrypt,  }\item[{char $\ast$}]{file\+\_\+dict }\end{DoxyParamCaption})}
+
+Donne le score d\textquotesingle{}une clé en fonction du nombre de mots décryptés dans le dictionnaire 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}} & un tableau d\textquotesingle{}entier répertoriant les scores des clés du même indice \\
+\hline
+\mbox{\texttt{ in}}  & {\em index\+\_\+key} & un entier correspondant à l\textquotesingle{}indice actuel donnant la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+decrypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier décrypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+dict} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier du dictionnaire\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c3_8c_ab8eedb648dd02cfd661f05e3868b7bd5}\label{dh__crack__c3_8c_ab8eedb648dd02cfd661f05e3868b7bd5}} 
+\index{dh\_crack\_c3.c@{dh\_crack\_c3.c}!dh\_crack\_c3@{dh\_crack\_c3}}
+\index{dh\_crack\_c3@{dh\_crack\_c3}!dh\_crack\_c3.c@{dh\_crack\_c3.c}}
+\doxysubsubsection{\texorpdfstring{dh\_crack\_c3()}{dh\_crack\_c3()}}
+{\footnotesize\ttfamily void dh\+\_\+crack\+\_\+c3 (\begin{DoxyParamCaption}\item[{char}]{Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]},  }\item[{int}]{Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]},  }\item[{char $\ast$}]{file\+\_\+crypt,  }\item[{char $\ast$}]{file\+\_\+dict,  }\item[{int}]{len\+\_\+key,  }\item[{int}]{nb\+Keys }\end{DoxyParamCaption})}
+
+Donne les clés candidates triées en utilisant la méthode C3 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}} & un tableau de caractères correspondant à la liste des clés candidates \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+decrypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier décrypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+dict} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier du dictionnaire \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Keys} & un entier représentant le nombre de clés candidates\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c3_8c_ac52502faac25a1479554ae6f3e7adbc3}\label{dh__crack__c3_8c_ac52502faac25a1479554ae6f3e7adbc3}} 
+\index{dh\_crack\_c3.c@{dh\_crack\_c3.c}!initScore@{initScore}}
+\index{initScore@{initScore}!dh\_crack\_c3.c@{dh\_crack\_c3.c}}
+\doxysubsubsection{\texorpdfstring{initScore()}{initScore()}}
+{\footnotesize\ttfamily void init\+Score (\begin{DoxyParamCaption}\item[{int}]{Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]} }\end{DoxyParamCaption})}
+
+initialise les valeurs de Scores\mbox{[}MAX\+\_\+\+KEYS\mbox{]} à 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}} & un tableau d\textquotesingle{}entier répertoriant les scores des clés du même indice\\
+\hline
+\end{DoxyParams}

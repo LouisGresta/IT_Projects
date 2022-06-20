@@ -1,0 +1,12 @@
+package serveur;
+
+public enum Request {
+	CONNECTION,
+	QUITAPPLICATION,
+	SENDMESSAGE,
+	SENDNUMMESSAGE,
+	CREATETICKET,
+	USERUPDATE,
+	
+	NONE
+}

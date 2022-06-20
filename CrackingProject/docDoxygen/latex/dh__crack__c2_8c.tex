@@ -1,0 +1,129 @@
+\hypertarget{dh__crack__c2_8c}{}\doxysection{Code/dh\+\_\+crack\+\_\+c2.c File Reference}
+\label{dh__crack__c2_8c}\index{Code/dh\_crack\_c2.c@{Code/dh\_crack\_c2.c}}
+
+
+Fonction dh\+\_\+crack\+\_\+c2.  
+
+
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dh\+\_\+crack\+\_\+c2.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a879122190076b2de6700cef7c44f33e6}{init\+Freq}} (double Freq\mbox{[}MAX\+\_\+\+LETTERS\mbox{]})
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a9fe3809574428de36f3c68c43d6461fe}{Decrypt}} (char $\ast$file\+\_\+crypt, char $\ast$file\+\_\+decrypt, char $\ast$key, int len\+\_\+key)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_ab40b3be6ccde715723720438ad4c999d}{Freq\+Letter}} (double Freq\mbox{[}MAX\+\_\+\+LETTERS\mbox{]}, char $\ast$file\+\_\+decrypt)
+\item 
+int \mbox{\hyperlink{dh__crack__c2_8c_a35d00b2a47912eb78c981fd9acfadde1}{d}} (double Freq\+\_\+th\mbox{[}MAX\+\_\+\+LETTERS\mbox{]}, double Freq\mbox{[}MAX\+\_\+\+LETTERS\mbox{]})
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_aac4c44691c0a42aa675265f63633cde6}{Sort\+Keys}} (char Keys\mbox{[}MAX\+\_\+\+KEYS\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}, int Scores\mbox{[}MAX\+\_\+\+KEYS\mbox{]}, int nb\+Keys, int len\+\_\+key)
+\item 
+void \mbox{\hyperlink{dh__crack__c2_8c_a7d51431b15f413a963b5382f23492d8a}{dh\+\_\+crack\+\_\+c2}} (char Keys\mbox{[}MAX\+\_\+\+KEYS\mbox{]}\mbox{[}MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}, int Scores\mbox{[}MAX\+\_\+\+KEYS\mbox{]}, char $\ast$file\+\_\+crypt, int len\+\_\+key, int nb\+Keys)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fonction dh\+\_\+crack\+\_\+c2. 
+
+\begin{DoxyAuthor}{Author}
+Louis Gresta 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10 janvier 2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dh__crack__c2_8c_a35d00b2a47912eb78c981fd9acfadde1}\label{dh__crack__c2_8c_a35d00b2a47912eb78c981fd9acfadde1}} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!d@{d}}
+\index{d@{d}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{d()}{d()}}
+{\footnotesize\ttfamily int d (\begin{DoxyParamCaption}\item[{double}]{Freq\+\_\+th\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]},  }\item[{double}]{Freq\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]} }\end{DoxyParamCaption})}
+
+Calcule la distance entre deux tableaux de fréquences 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Freq\+\_\+th\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]}} & un tableau de flottants représentant des fréquences théoriques de caractères dans un message \\
+\hline
+\mbox{\texttt{ in}}  & {\em Freq\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]}} & un tableau de flottants représentant des fréquences de caractères dans un message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c2_8c_a9fe3809574428de36f3c68c43d6461fe}\label{dh__crack__c2_8c_a9fe3809574428de36f3c68c43d6461fe}} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{Decrypt()}{Decrypt()}}
+{\footnotesize\ttfamily void Decrypt (\begin{DoxyParamCaption}\item[{char $\ast$}]{file\+\_\+crypt,  }\item[{char $\ast$}]{file\+\_\+decrypt,  }\item[{char $\ast$}]{key,  }\item[{int}]{len\+\_\+key }\end{DoxyParamCaption})}
+
+Décrypte le fichier codé avec une clé donnée dans le fichier donné 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em file\+\_\+crypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier crypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+decrypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier décrypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em key} & une chaîne de caractère correspondant à une clé candidate \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c2_8c_a7d51431b15f413a963b5382f23492d8a}\label{dh__crack__c2_8c_a7d51431b15f413a963b5382f23492d8a}} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!dh\_crack\_c2@{dh\_crack\_c2}}
+\index{dh\_crack\_c2@{dh\_crack\_c2}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{dh\_crack\_c2()}{dh\_crack\_c2()}}
+{\footnotesize\ttfamily void dh\+\_\+crack\+\_\+c2 (\begin{DoxyParamCaption}\item[{char}]{Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]},  }\item[{int}]{Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]},  }\item[{char $\ast$}]{file\+\_\+crypt,  }\item[{int}]{len\+\_\+key,  }\item[{int}]{nb\+Keys }\end{DoxyParamCaption})}
+
+Donne les clés candidates triées en utilisant la méthode C2 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}} & un tableau de caractères correspondant à la liste des clés candidates \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+crypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier crypté \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Keys} & un entier représentant le nombre de clés candidates\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c2_8c_ab40b3be6ccde715723720438ad4c999d}\label{dh__crack__c2_8c_ab40b3be6ccde715723720438ad4c999d}} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!FreqLetter@{FreqLetter}}
+\index{FreqLetter@{FreqLetter}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{FreqLetter()}{FreqLetter()}}
+{\footnotesize\ttfamily void Freq\+Letter (\begin{DoxyParamCaption}\item[{double}]{Freq\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]},  }\item[{char $\ast$}]{file\+\_\+decrypt }\end{DoxyParamCaption})}
+
+Calcul la fréquence d\textquotesingle{}apparition des lettres d\textquotesingle{}un fichier décrypté 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Freq\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]}} & un tableau de flottants représentant des fréquences de caractères dans un message \\
+\hline
+\mbox{\texttt{ in}}  & {\em file\+\_\+decrypt} & une chaîne de caractère donnant l\textquotesingle{}emplacement du fichier décrypté\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c2_8c_a879122190076b2de6700cef7c44f33e6}\label{dh__crack__c2_8c_a879122190076b2de6700cef7c44f33e6}} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!initFreq@{initFreq}}
+\index{initFreq@{initFreq}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{initFreq()}{initFreq()}}
+{\footnotesize\ttfamily void init\+Freq (\begin{DoxyParamCaption}\item[{double}]{Freq\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]} }\end{DoxyParamCaption})}
+
+initialise les valeurs de Freq\mbox{[}MAX\+\_\+\+LETTERS\mbox{]} à 0 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Freq\mbox{[}\+MAX\+\_\+\+LETTERS\mbox{]}} & un tableau de flottants représentant des fréquences de caractères dans un message\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dh__crack__c2_8c_aac4c44691c0a42aa675265f63633cde6}\label{dh__crack__c2_8c_aac4c44691c0a42aa675265f63633cde6}} 
+\index{dh\_crack\_c2.c@{dh\_crack\_c2.c}!SortKeys@{SortKeys}}
+\index{SortKeys@{SortKeys}!dh\_crack\_c2.c@{dh\_crack\_c2.c}}
+\doxysubsubsection{\texorpdfstring{SortKeys()}{SortKeys()}}
+{\footnotesize\ttfamily void Sort\+Keys (\begin{DoxyParamCaption}\item[{char}]{Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]},  }\item[{int}]{Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]},  }\item[{int}]{nb\+Keys,  }\item[{int}]{len\+\_\+key }\end{DoxyParamCaption})}
+
+Trie la liste de clées en fonction du score qu\textquotesingle{}elles ont obtenu (tri par sélection) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Keys\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}\mbox{[}\+MAX\+\_\+\+SIZE\+\_\+\+KEY\mbox{]}} & un tableau de caractères correspondant à la liste des clés candidates \\
+\hline
+\mbox{\texttt{ in}}  & {\em Scores\mbox{[}\+MAX\+\_\+\+KEYS\mbox{]}} & un tableau d\textquotesingle{}entier répertoriant les scores des clés du même indice \\
+\hline
+\mbox{\texttt{ in}}  & {\em nb\+Keys} & un entier représentant le nombre de clés candidates \\
+\hline
+\mbox{\texttt{ in}}  & {\em len\+\_\+key} & un entier correspondant à la longueur de la clé\\
+\hline
+\end{DoxyParams}
